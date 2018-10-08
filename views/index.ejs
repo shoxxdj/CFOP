@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<style type="text/css">
+		table{
+			text-align: center;
+		}
+		tr{
+			border-right:none;border-left:none;border-bottom:none;border-top:none
+		}
+		td{
+			border-right:none;border-left:none;border-bottom:none;border-top:none
+		}
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+<% positions.forEach(function(position){ var datas=position.datas; %>
+<h1><%= position.nom %></h1>
+		<div class="row justify-content-md-center">
+			<table class="">
+				<tr>
+					<td></td>
+					<td><%if(datas[0][1]==1){%>&#9644;<%}%></td>
+					<td><%if(datas[0][2]==1){%>&#9644;<%}%></td>
+					<td><%if(datas[0][3]==1){%>&#9644;<%}%></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><%if(datas[1][0]==1){%>&#9646;<%}%></td>
+					<td><%if(datas[1][1]==1){%>&#9635;<%}else{%>&#9633;<%}%></td>
+					<td><%if(datas[1][2]==1){%>&#9635;<%}else{%>&#9633;<%}%></td>
+					<td><%if(datas[1][3]==1){%>&#9635;<%}else{%>&#9633;<%}%></td>
+					<td><%if(datas[1][4]==1){%>&#9646;<%}%></td>
+				</tr>
+				<tr>
+					<td><%if(datas[2][0]==1){%>&#9646;<%}%></td>
+					<td><%if(datas[2][1]==1){%>&#9635;<%}else{%>&#9633;<%}%></td>
+					<td><%if(datas[2][2]==1){%>&#9635;<%}else{%>&#9633;<%}%></td>
+					<td><%if(datas[2][3]==1){%>&#9635;<%}else{%>&#9633;<%}%></td>
+					<td><%if(datas[2][4]==1){%>&#9646;<%}%></td>
+				</tr>
+				<tr>
+					<td><%if(datas[3][0]==1){%>&#9646;<%}%></td>
+					<td><%if(datas[3][1]==1){%>&#9635;<%}else{%>&#9633;<%}%></td>
+					<td><%if(datas[3][2]==1){%>&#9635;<%}else{%>&#9633;<%}%></td>
+					<td><%if(datas[3][3]==1){%>&#9635;<%}else{%>&#9633;<%}%></td>
+					<td><%if(datas[3][4]==1){%>&#9646;<%}%></td>	
+				</tr>
+				<tr>
+					<td></td>
+					<td><%if(datas[4][1]==1){%>&#9644;<%}%></td>
+					<td><%if(datas[4][2]==1){%>&#9644;<%}%></td>
+					<td><%if(datas[4][3]==1){%>&#9644;<%}%></td>
+					<td></td>
+				</tr>
+			</table>
+<p><%= position.solve %></p>
+		</div>
+<% }); %>
+	</div>
+
+
+</body>
+</html>
